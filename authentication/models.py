@@ -11,6 +11,7 @@ class User(AbstractBaseUser,PermissionsMixin):
     age=models.CharField(verbose_name="Возраст",max_length=255, null = True, blank=True)
     preparation=models.FloatField(verbose_name="Подготовка",default=1.0, null = True, blank=True)
     email=models.EmailField(verbose_name="Email",max_length=255,unique=True)
+    target = models.CharField(verbose_name="Цель",max_length=255, null = True, blank=True)
 
     is_active =models.BooleanField(verbose_name='Активирован',default=False)
     is_staff=models.BooleanField(verbose_name='Персонал',default=False)
