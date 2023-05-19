@@ -47,8 +47,9 @@ INSTALLED_APPS = [
     'authentication',
     'exercise',
     'workout',
+
     'rest_framework',
-    # 'corsheaders',
+    'corsheaders',
 
 ]
 
@@ -63,8 +64,10 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
+CORS_ORIGIN_ALLOW_ALL=True
+
 CORS_ALLOWED_ORIGINS = [
-    "https://our-school.space",
+    "http://polyfit.std-1725.ist.mospolytech.ru",
 ]
 
 ROOT_URLCONF = 'core.urls'
