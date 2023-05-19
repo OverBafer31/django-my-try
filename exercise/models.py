@@ -7,9 +7,6 @@ class Exercise(models.Model):
     time = models.IntegerField(verbose_name='Длительность', default = False)
     amount = models.IntegerField(verbose_name='Кол-во повторений', default = False)
     calories = models.IntegerField(verbose_name='Калории', default = False)
-    # hardness = models.CharField(verbose_name='Сложность', default = False)
-    # equipment = models.CharField(verbose_name='Экипировка', default = False)
-    # show_timer = models.BooleanField(verbose_name='Таймер', default = False)
     
     def __str__(self):
         return self.title
