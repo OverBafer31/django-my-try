@@ -73,6 +73,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://polyfit.std-1725.ist.mospolytech.ru",
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://polyfit.live', 'https://www.polyfit.live']
+
 ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
