@@ -6,6 +6,7 @@ from equipment.views import EquipmentViewset
 from type.views import TypeViewset
 from schedule.views import ScheduleViewset
 from difficulty.views import DifficultyViewset
+from gender.views import GenderViewset
 
 router=DefaultRouter()
 router.register('auth', UserViewset)
@@ -15,3 +16,4 @@ router.register('equipment', EquipmentViewset)
 router.register('type', TypeViewset)
 router.register('schedule', ScheduleViewset)
 router.register('difficulty', DifficultyViewset)
+router.register('gender', GenderViewset)

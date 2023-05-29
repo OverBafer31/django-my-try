@@ -1,11 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser,PermissionsMixin
 from authentication.managers import UserManager
+from gender.models import Gender
 
 class User(AbstractBaseUser,PermissionsMixin):
     firstname = models.CharField(verbose_name="Имя",max_length=255)
     avatar=models.ImageField(verbose_name="Аватар", upload_to='user_image', default=False, blank=True)
-    gender=models.CharField(verbose_name="Пол",max_length=255, null = True, blank=True)
+    gender=models.ManyToManyField(Gender)
     height=models.CharField(verbose_name="Рост",max_length=255, null = True, blank=True)
     weight=models.CharField(verbose_name="Вес",max_length=255, null = True, blank=True)
     age=models.CharField(verbose_name="Возраст",max_length=255, null = True, blank=True)

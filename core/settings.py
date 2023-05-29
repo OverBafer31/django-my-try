@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'type',
     'schedule',
     'difficulty',
+    'gender',
 
     'rest_framework',
     'corsheaders',

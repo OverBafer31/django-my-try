@@ -1,15 +1,14 @@
 from django.db import models
 from authentication.models import User
-from exercise.models import Exercise
+from workout.models import Workout
 
 class Schedule(models.Model):
     user = models.ManyToManyField(User)
-    workout = models.ManyToManyField(Exercise)
+    workout = models.ManyToManyField(Workout)
     date = models.DateField(verbose_name='Дата', default = False)
-    time = models.TimeField(verbose_name='Время', default = False)
 
     def __str__(self):
-        return self.user
+        return str(self.date)
 
     class Meta:
         verbose_name = 'Расписание'
