@@ -50,6 +50,10 @@ INSTALLED_APPS = [
     'authentication',
     'exercise',
     'workout',
+    'equipment',
+    'type',
+    'schedule',
+    'difficulty',
 
     'rest_framework',
     'corsheaders',
