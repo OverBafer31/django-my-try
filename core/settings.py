@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'exercise',
     'workout',
     'schedule',
+    'kpi',
+    'goal',
 
     'rest_framework',
     'corsheaders',
