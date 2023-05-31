@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from core.routers import router
+from workout.views import WorkoutList
 
 urlpatterns = [
     path('api/admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/schedule/', WorkoutList.as_view(), name='workout-list'),
 ]
